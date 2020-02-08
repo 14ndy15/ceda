@@ -1,0 +1,25 @@
+<section id="blog" class="section section--no-grid blog">
+    <div class="section__title">
+        <h2>Blog recientes</h2>
+    </div>
+    <div class="section__description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem doloremque quae. </p>
+    </div>
+
+    <div class="blog__list">
+
+        {% for i in 1..3 %}
+            <div class="blog__list__entry">
+                <div class="blog__list__entry__image">
+                    <img src="{{ asset('images/section/6.jpg') }}" alt="">
+                </div>
+                <div class="blog__list__entry__description">
+                    <h4>El caso de luna</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</section>

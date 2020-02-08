@@ -1,0 +1,85 @@
+.actions{
+    &__intro{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        @include atLarge{
+            flex-wrap: nowrap;
+        }
+
+        &__part{
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include atLarge{
+                width: 45%;
+            }
+
+            & > .section__description{
+                padding-top: 0;
+                padding-bottom: 0;
+
+                &:last-child{
+                    padding-bottom: 1.5em;
+                }
+            }
+
+        }
+    }
+
+    &__options{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__option{
+            width: 48.5%;
+            background: $mainViolet;
+            border-radius: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 1em;
+            margin: .5em 0;
+
+            @include atLarge{
+                width: 32%;
+            }
+
+            &__icon{
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & img{
+                    width: auto;
+                    height: 10vh;
+
+                    @include atLarge{
+                        height: 25vh;
+                    }
+                }
+            }
+
+            &__text{
+                position: absolute;
+                bottom: 1em;
+                left: 1em;
+
+                & a{
+                    color: white;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

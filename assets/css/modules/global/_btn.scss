@@ -1,0 +1,21 @@
+.btn{
+    background: $mainViolet;
+    border-radius: 3px;
+    padding: .5em 1em;
+    color: white;
+    margin: .5em .5em .5em 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px transparent solid;
+    cursor: pointer;
+    display: inline-block;
+
+    @include atLarge{
+        padding: .75em 1.25em;
+    }
+
+    &--white{
+        background-color: white;
+        color: $mainViolet;
+    }
+}

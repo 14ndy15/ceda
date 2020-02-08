@@ -1,0 +1,51 @@
+.blog{
+    display: flex;
+
+
+    &__list{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+
+        &__entry{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @include atLarge{
+                width: 32%;
+            }
+
+            &__image{
+
+                overflow: hidden;
+                border-radius: 2px;
+
+                & img{
+                    height: 30vh;
+                    width: auto;
+
+                    @include atLarge{
+                        height: 45vh;
+                    }
+                }
+            }
+
+            &__description{
+                position: relative;
+                width: 95%;
+                padding: 1em;
+                border-radius: 2px;
+                box-shadow: 2px 2px 10px rgba(black, .25);
+                top: -1em;
+                background: white;
+
+                & h4{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

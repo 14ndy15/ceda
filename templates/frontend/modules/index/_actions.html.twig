@@ -1,0 +1,35 @@
+<section id="actions" class="section section--no-grid section--white actions">
+    <div class="actions__intro">
+        <div class="actions__intro__part">
+            <div class="section__title">
+                <h2>Puedes ayudar de muchas maneras</h2>
+            </div>
+            <div class="section__description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus numquam obcaecati pariatur totam, velit vero? A accusantium architecto asperiores commodi cum eligendi fuga, ipsam laboriosam nemo obcaecati omnis sapiente.</p>
+            </div>
+        </div>
+        <div class="actions__intro__part">
+            <div class="section__description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus numquam obcaecati pariatur totam, velit vero? A accusantium architecto asperiores commodi cum eligendi fuga, ipsam laboriosam nemo obcaecati omnis sapiente.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolorum excepturi explicabo facere hic ipsam libero magni minima molestias neque nesciunt nobis, odio optio possimus quasi sapiente sint totam unde.</p>
+
+                <a href="#" class="btn">Unete</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="actions__options">
+        {% for i in 1..6 %}
+            <div class="actions__options__option">
+            <div class="actions__options__option__icon">
+                <img src="{{ asset('images/svg/zunzun.svg') }}" alt="">
+            </div>
+            <div class="actions__options__option__text">
+                <a href="#">Apadrina</a>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>

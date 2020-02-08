@@ -1,0 +1,139 @@
+main{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    & .section{
+        position: relative;
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 2.5%;
+        margin: 1px auto;
+
+        grid-template-areas:    "title"
+                                "images"
+                                "description";
+
+        @include atLarge {
+            padding: 0 5%;
+
+            grid-template-areas: "images title"
+                                 "images description"
+                                 "images text";
+
+            grid-template-columns: 55% 40%;
+        }
+
+        &__title{
+            width: 100%;
+            text-align: center;
+            grid-area: title;
+
+            @include atLarge{
+                text-align: left;
+            }
+
+            & h2{
+                color: $mainViolet;
+
+                @include atLarge{
+                    margin-bottom: inherit;
+                }
+            }
+        }
+
+        &__description{
+            width: 100%;
+            margin: auto;
+            grid-area: description;
+            padding-bottom: 1em;
+
+            @include atLarge{
+                margin: 0;
+            }
+        }
+
+        &__image{
+            position: relative;
+            grid-area: images;
+            margin: .5em auto;
+            overflow: hidden;
+            max-height: 50vh;
+            height: 50vh;
+
+            @include atLarge{
+                width: 100%;
+                margin: 2em auto;
+            }
+
+            &__decorator{
+                position: absolute;
+                bottom: -1em;
+                right: 0;
+                transform: rotate(-25deg);
+                z-index: 1;
+                width: 3em;
+                height: 3em;
+
+                @include atLarge{
+                    bottom: .5em;
+                    right: .5em;
+                    width: 5em;
+                    height: 5em;
+                }
+            }
+        }
+
+        &--violet{
+            background-color: $mainViolet;
+
+            & h2{
+                color: white;
+            }
+
+            & p{
+                color: white;
+            }
+        }
+
+        &--white{
+            background-color: white;
+
+            & h2{
+                color: $mainViolet;
+            }
+        }
+
+        &--grey{
+            background-color: $mainGrey;
+
+            & h2{
+                color: $mainViolet;
+            }
+
+            & p{
+                color: white;
+            }
+        }
+
+        &--inverse{
+            @include atLarge {
+                grid-template-areas: "title       images"
+                                     "description images"
+                                     "text        images";
+
+                grid-template-columns: 30% 60%;
+            }
+        }
+
+        &--no-grid{
+            display: flex;
+
+        }
+
+    }
+
+}

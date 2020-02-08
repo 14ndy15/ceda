@@ -1,0 +1,120 @@
+.hero{
+    position: relative;
+
+    &__image{
+        overflow: hidden;
+        width: 100vw;
+        height: 95vh;
+
+        @include atLarge{
+            height: 100vh;
+        }
+
+        &__tree{
+            position: absolute;
+            height: auto;
+            width: 110%;
+            margin: auto;
+            bottom: 3em;
+            left: -5%;
+
+            @include atLarge{
+                width: 40%;
+                height: 80%;
+                left: auto;
+                right: 2em;
+                bottom: 2em;
+            }
+        }
+
+        &__clouds{
+            position: absolute;
+            top: 7em;
+            width: 14em;
+            left: 2em;
+
+            @include atLarge{
+                top: 4em;
+                width: 12em;
+                left: 50%;
+            }
+        }
+
+        &__dog{
+            position: absolute;
+            bottom: 1em;
+            right: 2em;
+            width: 10em;
+
+            @include atLarge{
+                width: 7em;
+            }
+        }
+
+        &__zunzun{
+            position: absolute;
+            width: 4em;
+            top: 75%;
+            left: 3em;
+            transform: translate(-40%, -50%);
+
+            @include atLarge{
+                top: 50%;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__content{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+
+        @include atLarge{
+            width: 50%;
+            margin: auto 3em;
+        }
+
+        &__title{
+            & h1{
+                padding: .5em .25em;
+            }
+        }
+
+        &__text{
+            display: flex;
+            width: 80%;
+            margin: auto;
+
+            @include atLarge{
+                margin: auto 0;
+            }
+
+            & h4{
+                color: white;
+                padding: .5em;
+
+                @include atLarge{
+                    color: $mainGrey;
+                    padding: .25em;
+                    margin: .5em 0;
+                }
+            }
+
+        }
+
+        &__action{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            @include atLarge{
+                justify-content: start;
+                margin: 2em;
+            }
+        }
+
+    }
+}

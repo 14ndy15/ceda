@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}inicio{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="meta">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('index') }}
+{% endblock %}
+
+{% block body %}
+    <main>
+        {{ include('frontend/modules/index/_hero.html.twig') }}
+
+        {{ include('frontend/modules/index/_us.html.twig') }}
+
+        {{ include('frontend/modules/index/_learn.html.twig') }}
+
+        {{ include('frontend/modules/index/_sterilization.html.twig') }}
+
+        {{ include('frontend/modules/index/_actions.html.twig') }}
+
+        {{ include('frontend/modules/index/_join.html.twig') }}
+
+        {{ include('frontend/modules/index/_blog.html.twig') }}
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('index') }}
+{% endblock %}

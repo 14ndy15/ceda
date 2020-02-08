@@ -1,0 +1,11 @@
+.sterilization{
+
+    & .section__image {
+        overflow: hidden;
+
+        max-height: 45vh;
+        @include atLarge {
+            max-height: 35vh;
+        }
+    }
+}
