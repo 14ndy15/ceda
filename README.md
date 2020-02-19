@@ -2,7 +2,7 @@
 
 
 CEDA webpage is currently in development using 
-[Symfony Framework 4](http://www.symfony.com) and Webpack.
+[Symfony Framework 5](http://www.symfony.com) and Webpack.
 
 
 ## How to
