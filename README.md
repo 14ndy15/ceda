@@ -15,6 +15,10 @@ CEDA webpage is currently in development using
 **DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7**
 6. For update the database schema run ``php bin/console make:migration`` and 
 ``php bin/console doctrine:migrations:migrate``
+7. Build assets, run ``npm run build``
+
+## Runing on Local
+1. Use the [Symfony Client](https://symfony.com/download) or [run a local php server](https://www.php.net/manual/es/features.commandline.webserver.php) at public folder.
 
 ## Deploy
 
